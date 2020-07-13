@@ -8,6 +8,8 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App/pages/App';
 import reducers from './App/reducers';
+import reduxThunk from 'redux-thunk';
+import { createStore, applyMiddleware, compose } from 'redux';
 
 // enable chrome extension to help us with redux forms
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
