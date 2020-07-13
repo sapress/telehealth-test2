@@ -1,13 +1,17 @@
+// App compnent - includes the browser router and NavBar
+
 import React from 'react';
-//import logo from './logo.svg';
-import './App.css';
 import { Component } from 'react';
-import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import './App.css';
+
+import { NavLink, withRouter } from 'react-router-dom';
+import { Route, Switch, BrowserRouter } from 'react-router-dom';
+
+// Component Imports
+import NavBar from './NavBar';
 import Home from './Home';
 import List from './List';
-import { NavLink, withRouter } from 'react-router-dom';
-import NavBar from './NavBar';
+import CommunityHome from './CommunityHome';
 
 class App extends Component {
     render() {
@@ -17,6 +21,7 @@ class App extends Component {
                     <NavBar />
                     <Route exact path="/" component={Home} />
                     <Route path="/list" component={List} />
+                    <Route path="/community" component={CommunityHome} />
                 </BrowserRouter>
             </div>
         );
