@@ -1,3 +1,6 @@
+export const SIGN_IN = 'SIGN_IN';
+export const SIGN_OUT = 'SIGN_ OUT';
+
 export const signIn = (userId) => {
     return {
         type: SIGN_IN,
