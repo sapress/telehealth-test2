@@ -1,13 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-//import App from './App';
+//import './index.css';
 import * as serviceWorker from './serviceWorker';
 import { render } from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 
 import './index.css';
 import App from './App/pages/App';
+import reducers from './App/reducers';
+
+// enable chrome extension to help us with redux forms
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const store = createStore(reducers, composeEnhancers(applyMiddleware(reduxThunk))); // middleware = reduxthunk
 
 render(
     <BrowserRouter>
