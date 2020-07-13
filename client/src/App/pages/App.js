@@ -6,7 +6,7 @@ import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import './App.css';
 import Home from './Home';
 import List from './List';
-//import { navLink, withRouter } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 import NavBar from './NavBar';
 
 class App extends Component {
