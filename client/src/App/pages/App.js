@@ -2,7 +2,7 @@ import React from 'react';
 //import logo from './logo.svg';
 import './App.css';
 import { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import './App.css';
 import Home from './Home';
 import List from './List';
@@ -13,11 +13,11 @@ class App extends Component {
     render() {
         const App = () => (
             <div className="ui container">
-                <Router>
+                <BrowserRouter>
                     <NavBar />
                     <Route exact path="/" component={Home} />
                     <Route path="/list" component={List} />
-                </Router>
+                </BrowserRouter>
             </div>
         );
         return (
