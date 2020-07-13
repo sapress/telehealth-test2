@@ -6,15 +6,18 @@ import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import Home from './Home';
 import List from './List';
+//import { navLink, withRouter } from 'react-router-dom';
+import NavBar from './NavBar';
 
 class App extends Component {
     render() {
         const App = () => (
-            <div>
-                <Switch>
+            <div className="ui container">
+                <Router>
+                    <NavBar />
                     <Route exact path="/" component={Home} />
                     <Route path="/list" component={List} />
-                </Switch>
+                </Router>
             </div>
         );
         return (
