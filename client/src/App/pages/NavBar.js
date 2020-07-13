@@ -15,7 +15,7 @@ class NavBar extends React.Component {
         const { activeItem } = this.state;
 
         return (
-            <Menu secondary>
+            <Menu secondary pointing>
                 <Menu.Item
                     as={NavLink}
                     to="/"
