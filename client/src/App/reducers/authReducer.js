@@ -1,5 +1,5 @@
 const INITIAL_STATE = {
-    isSignedIn = null;
+    isSignedIn = null,
     userID = null,
 }
 
