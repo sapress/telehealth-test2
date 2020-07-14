@@ -26,6 +26,8 @@ class App extends Component {
                     <Route path="/list" component={List} />
                     <Route path="/community" component={CommunityHome} />
 					<Route path="/MySpace" component={MySpace} />
+					<Route path="/MeditationPage" component={MeditationPage} />
+					<Route path="/JournalForm" component={JournalForm} />
                 </BrowserRouter>
             </div>
         );
