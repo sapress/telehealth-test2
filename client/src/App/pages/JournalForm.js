@@ -34,7 +34,4 @@ class NameForm extends React.Component {
   }
 }
 
-ReactDOM.render(
-  <NameForm />,
-  document.getElementById('root')
-);
+export default JournalForm
