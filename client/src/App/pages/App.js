@@ -12,6 +12,7 @@ import NavBar from './NavBar';
 import Home from './Home';
 import List from './List';
 import CommunityHome from './CommunityHome';
+import MySpace from './MySpace';
 
 class App extends Component {
     render() {
@@ -22,6 +23,7 @@ class App extends Component {
                     <Route exact path="/" component={Home} />
                     <Route path="/list" component={List} />
                     <Route path="/community" component={CommunityHome} />
+					<Route path="/MySpace" component={MySpace} />
                 </BrowserRouter>
             </div>
         );
