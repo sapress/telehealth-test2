@@ -34,4 +34,4 @@ class NameForm extends React.Component {
   }
 }
 
-export default JournalForm
+export default JournalForm;
