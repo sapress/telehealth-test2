@@ -1,35 +1,51 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import { NavLink, withRouter } from 'react-router-dom';
 
-
-class NameForm extends React.Component {
-  constructor(props) {
+class JournalForm extends Component {
+  // Initialize the state
+  constructor(props){
     super(props);
-    this.state = {value: ''};
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.state = {
+      list: []
+    }
   }
 
-  handleChange(event) {
-    this.setState({value: event.target.value});
+  // Fetch the list on first mount
+  componentDidMount() {
+    this.getList();
   }
 
-  handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.value);
-    event.preventDefault();
+  // Retrieves the list of items from the Express app
+  getList = () => {
+    fetch('/api/getList')
+    .then(res => res.json())
+    .then(list => this.setState({ list }))
   }
 
   render() {
+    const { list } = this.state;
+
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
-          Name:
-          <input type="text" value={this.state.value} onChange={this.handleChange} />
-        </label>
-        <input type="submit" value="Submit" />
-      </form>
+      <div className="App">
+        <h1>List of Items</h1>
+        {/* Check to see if any items are found*/}
+        {list.length ? (
+          <div>
+            {/* Render the list of items */}
+            {list.map((item) => {
+              return(
+                <div>
+                  {item}
+                </div>
+              );
+            })}
+          </div>
+        ) : (
+          <div>
+            <h2>No List Items Found</h2>
+          </div>
+        )
+      }
+      </div>
     );
   }
 }

@@ -11,7 +11,7 @@ class MySpace extends Component {
                 <h1>My Personal Space</h1>
 
                 {/* Link to List.js */}
-                <Link to={'./jounralform'}>
+                <Link to={'./JounralForm'}>
                     <button variant="raised">My Journal</button>
                 </Link>
 				
