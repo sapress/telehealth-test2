@@ -10,21 +10,24 @@ class MySpace extends Component {
             <div className="App">
                 <h1>My Personal Space</h1>
 
-                {/* Link to List.js */}
+                <div>
+				{/* Link to List.js */}
                 <Link to={'./JounralForm'}>
                     <button variant="raised">My Journal</button>
                 </Link>
-				
-				<Text>{"\n"}</Text>
-				
+				</div>
+
+				<div>
 				{/* Link to List.js */}
                 <Link to={'./list'}>
                     <button variant="raised">Practice Meditation</button>
                 </Link>
+				</div>
 				
-				<Text>{"\n"}</Text>
 				
-				<a href="url">https://www.mindful.org/5-guided-meditations-to-investigate-panic-and-anxiety/</a>
+				<div>
+					<a href="https://www.mindful.org/5-guided-meditations-to-investigate-panic-and-anxiety/" target="_blank">Guided Meditation for Panic and Anxiety (credit: mindful.org)</a>
+				</div>
 				
             </div>
         );
