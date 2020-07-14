@@ -15,14 +15,14 @@ class MySpace extends Component {
                     <button variant="raised">My Journal</button>
                 </Link>
 				
-				{"\n"}
+				<Text>{"\n"}</Text>
 				
 				{/* Link to List.js */}
                 <Link to={'./list'}>
                     <button variant="raised">Practice Meditation</button>
                 </Link>
 				
-				{"\n"}
+				<Text>{"\n"}</Text>
 				
 				<a href="url">https://www.mindful.org/5-guided-meditations-to-investigate-panic-and-anxiety/</a>
 				
