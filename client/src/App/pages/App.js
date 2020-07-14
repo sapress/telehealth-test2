@@ -13,6 +13,8 @@ import Home from './Home';
 import List from './List';
 import CommunityHome from './CommunityHome';
 import MySpace from './MySpace';
+import MeditationPage from './MeditationPage';
+import JournalForm from './JournalForm';
 
 class App extends Component {
     render() {
