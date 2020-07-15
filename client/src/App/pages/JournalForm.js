@@ -27,7 +27,7 @@ class JournalHome extends Component {
   render() {
     return (
 	
-	
+	<div>
 	<script>
 	var WhichPrompt = sessionStorage.getItem("WhichPrompt");
 	document.getElementById("WhichPrompt").innerHTML = WhichPrompt;
@@ -41,6 +41,7 @@ class JournalHome extends Component {
         </label>
         <input type="submit" value="Submit" />
       </form>
+	  </div>
     );
   }
 }
