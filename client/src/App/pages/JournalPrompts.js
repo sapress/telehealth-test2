@@ -13,13 +13,25 @@ class JournalPrompts extends React.Component {
 				<h1>Please Select one of the Prompts Below</h1>
 
 			<div>
-				<Link to={'./JournalPrompts'}>
+				<div>
+				<Link to={'./JournalForm'}>
 					<button variant="raised">Prompt One</button>
 					<script>
 						var WhichPrompt = "PromptOne";
 						sessionStorage.setItem("WhichPrompt","PromptOne");
 					</script>
 				</Link>
+				</div>
+				
+				<div>
+				<Link to={'./JournalForm'}>
+					<button variant="raised">Prompt Two</button>
+					<script>
+						var WhichPrompt = "PromptTwo";
+						sessionStorage.setItem("WhichPrompt","PromptTwo");
+					</script>
+				</Link>
+				</div>
 			</div>
 			</div>
 			
