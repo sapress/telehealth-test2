@@ -29,6 +29,9 @@ class MeditationPage extends React.Component {
 			<div>
 				Don't have that much time? Click <a href="https://www.mindful.org/5-guided-meditations-to-investigate-panic-and-anxiety/" target="_blank"><b>here</b></a> for a collection of guided meditations 5 minutes or less.
 			</div>
+			<div>
+			Another short guided meditation can be found  <a href="https://www.headspace.com/meditation/5-minute-meditation" target="_blank"><b>here</b></a>
+			</div>
 			</section>
 		
 		)
