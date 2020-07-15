@@ -26,12 +26,13 @@ class JournalHome extends Component {
 
   render() {
     return (
+	
+	
 	<script>
 	var WhichPrompt = sessionStorage.getItem("WhichPrompt");
 	document.getElementById("WhichPrompt").innerHTML
 	</script>
 	
-	<h1>Hilo</h1>
       <form onSubmit={this.handleSubmit}>
         <label>
           Essay:
