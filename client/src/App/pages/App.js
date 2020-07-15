@@ -14,6 +14,8 @@ import List from './List';
 import CommunityHome from './CommunityHome';
 import MySpace from './MySpace';
 import MeditationPage from './MeditationPage';
+import JournalHome from './JournalHome';
+import JournalPrompts from './JournalPrompts';
 import JournalForm from './JournalForm';
 
 class App extends Component {
@@ -27,6 +29,8 @@ class App extends Component {
                     <Route path="/community" component={CommunityHome} />
 					<Route path="/MySpace" component={MySpace} />
 					<Route path="/MeditationPage" component={MeditationPage} />
+					<Route path="/JournalHome" component={JournalHome} />
+					<Route path="/JournalPrompts" component={JournalPrompts} />
 					<Route path="/JournalForm" component={JournalForm} />
                 </BrowserRouter>
             </div>
