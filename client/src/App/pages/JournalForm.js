@@ -28,9 +28,6 @@ class JournalHome extends Component {
     return (
 	<script>
 	var WhichPrompt = sessionStorage.getItem("WhichPrompt");
-	</script>
-	
-	<script>
 	document.getElementById("WhichPrompt").innerHTML
 	</script>
 	
