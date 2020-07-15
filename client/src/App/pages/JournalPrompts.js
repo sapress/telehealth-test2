@@ -4,24 +4,35 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { NavLink, withRouter } from 'react-router-dom';
 
+  constructor(props) {
+    super(props);
+    this.state = {value: ''};
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+
+  handleSubmit(event) {
+    alert('A name was submitted: ' + this.state.value);
+    event.preventDefault();
+  }
+
+
+
 class JournalPrompts extends Component {
     render() {
         return (
-            <div className="App">
-                <h1>Please Select one of the Following Journal Prompts</h1>
-
-                <div>
-				
-				<ul> <li onClick={() => console.log("clicked A!")}>A</li> </ul>
-				<ul> <li onClick={() => console.log("clicked B!")}>B</li> </ul>
-				<ul> <li onClick={() => console.log("clicked C!")}>C</li> </ul>
-				<ul> <li onClick={() => console.log("clicked D!")}>D</li> </ul>
-				
-				</div>
-				
-				
-            </div>
-        );
+      <form onSubmit={this.handleSubmit}>
+        <label>
+          Name:
+          <input type="text" value={this.state.value} onChange={this.handleChange} />
+        </label>
+        <input type="submit" value="Submit" />
+      </form>
     }
 }
 

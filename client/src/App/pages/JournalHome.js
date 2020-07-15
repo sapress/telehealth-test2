@@ -11,7 +11,7 @@ class JournalHome extends Component {
                 <h1>Journal Home</h1>
 
                 {/* Link to List.js */}
-                <Link to={'./JournalForm'}>
+                <Link to={'./JournalPrompts'}>
                     <button variant="raised">Create New Entry</button>
                 </Link>
 				
