@@ -25,9 +25,7 @@ class MySpace extends Component {
 				</div>
 				
 				
-				<div>
-					<a href="https://www.mindful.org/5-guided-meditations-to-investigate-panic-and-anxiety/" target="_blank">Guided Meditation for Panic and Anxiety (credit: mindful.org)</a>
-				</div>
+				
 				
             </div>
         );
