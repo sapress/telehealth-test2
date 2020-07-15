@@ -33,6 +33,8 @@ class JournalHome extends Component {
 	document.getElementById("WhichPrompt").innerHTML
 	</script>
 	
+	BufferText
+	
       <form onSubmit={this.handleSubmit}>
         <label>
           Essay:
