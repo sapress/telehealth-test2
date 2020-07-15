@@ -5,7 +5,7 @@ import { Input, Menu } from 'semantic-ui-react';
 import { NavLink, withRouter } from 'react-router-dom';
 
 class NavBar extends React.Component {
-    state = { activeItem: 'JournalForm' };
+    state = { activeItem: 'Home' };
 
     handleClick = (event, { name }) => {
         this.setState({ activeItem: name });
@@ -43,6 +43,22 @@ class NavBar extends React.Component {
 					to="/MySpace"
 					name="MySpace"
 					active={activeItem === 'MySpace'}
+					onClick={this.handleItemClick}
+				/>
+				
+				<Menu.Item
+					as={NavLink}
+					to="/MeditationPage"
+					name="MeditationPage"
+					active={activeItem === 'MeditationPage'}
+					onClick={this.handleItemClick}
+				/>
+				
+				<Menu.Item
+					as={NavLink}
+					to="/JournalForm"
+					name="JournalForm"
+					active={activeItem === 'JournalForm'}
 					onClick={this.handleItemClick}
 				/>
             
