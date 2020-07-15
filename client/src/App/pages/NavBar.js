@@ -5,7 +5,7 @@ import { Input, Menu } from 'semantic-ui-react';
 import { NavLink, withRouter } from 'react-router-dom';
 
 class NavBar extends React.Component {
-    state = { activeItem: 'Home' };
+    state = { activeItem: 'JournalForm' };
 
     handleClick = (event, { name }) => {
         this.setState({ activeItem: name });
