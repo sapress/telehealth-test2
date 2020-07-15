@@ -12,14 +12,14 @@ class MySpace extends Component {
 
                 <div>
 				{/* Link to List.js */}
-                <Link to={'./JounralForm'}>
+                <Link to={'./JournalForm'}>
                     <button variant="raised">My Journal</button>
                 </Link>
 				</div>
 
 				<div>
 				{/* Link to List.js */}
-                <Link to={'./list'}>
+                <Link to={'./MeditationPage'}>
                     <button variant="raised">Practice Meditation</button>
                 </Link>
 				</div>
