@@ -5,36 +5,24 @@ import { Link } from 'react-router-dom';
 import { NavLink, withRouter } from 'react-router-dom';
 
 class JournalPrompts extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      value: 'Please write an essay about your favorite DOM element.'
-    };
 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
+<h1>Please Select one of the Prompts Below</h1>
 
-  handleChange(event) {
-    this.setState({value: event.target.value});
-  }
+<div>
 
-  handleSubmit(event) {
-    alert('An essay was submitted: ' + this.state.value);
-    event.preventDefault();
-  }
+	<div>
+	<Link to={'./JournalPrompts'}>
+        <button variant="raised">Prompt One</button>
+		var WhichPrompt = "PromptOne";
+		<script>
+		sessionStorage.setItem("WhichPrompt","PromptOne");
+		</script>
+    </Link>
+	</div>
+	
+	
+</div>
 
-  render() {
-    return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
-          Essay:
-          <textarea value={this.state.value} onChange={this.handleChange} />
-        </label>
-        <input type="submit" value="Submit" />
-      </form>
-    );
-  }
 }
 
 
