@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { NavLink, withRouter } from 'react-router-dom';
 
-class JournalHome extends Component {
+class JournalPrompts extends Component {
     render() {
         return (
             <div className="App">
