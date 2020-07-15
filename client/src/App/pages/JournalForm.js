@@ -30,7 +30,7 @@ class JournalHome extends Component {
 	
 	<script>
 	var WhichPrompt = sessionStorage.getItem("WhichPrompt");
-	document.getElementById("WhichPrompt").innerHTML
+	document.getElementById("WhichPrompt").innerHTML = WhichPrompt;
 	</script>
 	
 	{ /* Seen something like this in the other files*/}
