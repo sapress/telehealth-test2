@@ -4,9 +4,12 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { NavLink, withRouter } from 'react-router-dom';
 
+class JournalPrompts extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {value: ''};
+    this.state = {
+      value: 'Please write an essay about your favorite DOM element.'
+    };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -17,23 +20,21 @@ import { NavLink, withRouter } from 'react-router-dom';
   }
 
   handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.value);
+    alert('An essay was submitted: ' + this.state.value);
     event.preventDefault();
   }
 
-
-
-class JournalPrompts extends Component {
-    render() {
-        return (
+  render() {
+    return (
       <form onSubmit={this.handleSubmit}>
         <label>
-          Name:
-          <input type="text" value={this.state.value} onChange={this.handleChange} />
+          Essay:
+          <textarea value={this.state.value} onChange={this.handleChange} />
         </label>
         <input type="submit" value="Submit" />
       </form>
-    }
+    );
+  }
 }
 
 
