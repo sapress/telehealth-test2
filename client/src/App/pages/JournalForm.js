@@ -33,7 +33,6 @@ class JournalHome extends Component {
 	document.getElementById("WhichPrompt").innerHTML = WhichPrompt;
 	</script>
 	
-	{ /* Seen something like this in the other files*/}
 	
       <form onSubmit={this.handleSubmit}>
         <label>
