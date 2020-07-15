@@ -5,26 +5,26 @@ import { Link } from 'react-router-dom';
 import { NavLink, withRouter } from 'react-router-dom';
 
 class JournalPrompts extends React.Component {
+	render() {
+		return(
+			<div className="App">
 
-<h1>Please Select one of the Prompts Below</h1>
 
-<div>
+				<h1>Please Select one of the Prompts Below</h1>
 
-	<div>
-	<Link to={'./JournalPrompts'}>
-        <button variant="raised">Prompt One</button>
-		var WhichPrompt = "PromptOne";
-		<script>
-		sessionStorage.setItem("WhichPrompt","PromptOne");
-		</script>
-    </Link>
-	</div>
-	
-	
-</div>
-
+			<div>
+				<Link to={'./JournalPrompts'}>
+					<button variant="raised">Prompt One</button>
+					var WhichPrompt = "PromptOne";
+					<script>
+						sessionStorage.setItem("WhichPrompt","PromptOne");
+					</script>
+				</Link>
+			</div>
+			</div>
+			
+		);
+	}
 }
-
-
 
 export default JournalPrompts;
