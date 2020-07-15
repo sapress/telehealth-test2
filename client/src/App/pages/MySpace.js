@@ -12,7 +12,7 @@ class MySpace extends Component {
 
                 <div>
 				{/* Link to List.js */}
-                <Link to={'./JournalForm'}>
+                <Link to={'./JournalHome'}>
                     <button variant="raised">My Journal</button>
                 </Link>
 				</div>

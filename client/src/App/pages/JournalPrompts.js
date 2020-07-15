@@ -15,8 +15,8 @@ class JournalPrompts extends React.Component {
 			<div>
 				<Link to={'./JournalPrompts'}>
 					<button variant="raised">Prompt One</button>
-					var WhichPrompt = "PromptOne";
 					<script>
+						var WhichPrompt = "PromptOne";
 						sessionStorage.setItem("WhichPrompt","PromptOne");
 					</script>
 				</Link>
