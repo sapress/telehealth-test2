@@ -35,11 +35,14 @@ class JournalHome extends Component {
 	<div>
 	<html>
 	<body>
-	<p id="demo"></p>
+	<h1 id="id01">Prompt Here</h1>
+	
 	<script>
-	var WhichPrompt = localStorage.getItem("WhichPrompt");
-	document.getElementById("WhichPrompt").innerHTML = WhichPrompt;
+	var WhichPrompt = document.getElementById("id01");
+	var PromptTitle = localStorage.getItem("WhichPrompt");
+	WhichPrompt.innerHTML = PromptTitle;
 	</script>
+	
 	</body>
 	</html>
 	</div>
