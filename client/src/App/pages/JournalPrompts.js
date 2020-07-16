@@ -4,19 +4,19 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { NavLink, withRouter } from 'react-router-dom';
 
-handleClick(){
-	alert('buttonclick!');
-}
+
 
 function PromptOne(){
 	var WhichPrompt = 'Prompt One';
 	sessionStorage.WhichPrompt = JSON.stringify(WhichPrompt);
+	alert('Prompt One!');
 	active={activeItem === 'JournalForm'}
 }
 
 function PromptTwo(){
 	var WhichPrompt = 'Prompt Two';
 	sessionStorage.WhichPrompt = JSON.stringify(WhichPrompt);
+	alert('Prompt Two!');
 	active={activeItem === 'JournalForm'}
 }
 
