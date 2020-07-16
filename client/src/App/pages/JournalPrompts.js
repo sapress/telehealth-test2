@@ -28,15 +28,12 @@ class JournalPrompts extends React.Component {
 				<h1>Please Select one of the Prompts Below</h1>
 
 			<div>
-				<div>
-					<button onclick={PromptOne}>Prompt One</button>
-				</div>
-				
-				<div>
-				
-					<button onclick={PromptTwo}>Prompt Two</button>
-
-				</div>
+				<select>
+  <option value="grapefruit">Grapefruit</option>
+  <option value="lime">Lime</option>
+  <option selected value="coconut">Coconut</option>
+  <option value="mango">Mango</option>
+</select>
 			</div>
 			</div>
 			
