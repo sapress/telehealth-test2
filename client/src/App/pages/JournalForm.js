@@ -33,19 +33,21 @@ class JournalHome extends Component {
 	<div>
 	
 	<div>
-	<html>
+	
 	<body>
 	<h1 id="id01">Prompt Here</h1>
+	
+	alert('Value of PromptTitle: ' + PromptTitle);
 	
 	<script>
 	var WhichPrompt = document.getElementById("id01");
 	var PromptTitle = localStorage.getItem("WhichPrompt");
-	alert('Value of PromptTitle: ' + PromptTitle);
+	
 	WhichPrompt.innerHTML = PromptTitle;
 	</script>
 	
 	</body>
-	</html>
+	
 	</div>
 	
 	
