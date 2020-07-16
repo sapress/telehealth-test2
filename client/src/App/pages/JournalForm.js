@@ -8,8 +8,8 @@ class JournalHome extends Component {
       constructor(props) {
     super(props);
     this.state = {
-      value: 'Can I modify the "value" var?.'
-	  PromptToDisplay = localStorage.getItem("WhichPrompt");
+      value: 'Can I modify the "value" var?.',
+	  PromptToDisplay: localStorage.getItem("WhichPrompt");
     };
 
     this.handleChange = this.handleChange.bind(this);
