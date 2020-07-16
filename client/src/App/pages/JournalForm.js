@@ -9,6 +9,7 @@ class JournalHome extends Component {
     super(props);
     this.state = {
       value: 'Can I modify the "value" var?.'
+	  PromptToDisplay = localStorage.getItem("WhichPrompt");
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -28,11 +29,17 @@ class JournalHome extends Component {
     return (
 	
 	<div>
+	
+	<div>
 	<script>
 	var WhichPrompt = sessionStorage.getItem("WhichPrompt");
 	document.getElementById("WhichPrompt").innerHTML = WhichPrompt;
 	</script>
+	</div>
 	
+	<div>
+	<textarea value={this.state.PromptToDisplay} />
+	</div>
 	
       <form onSubmit={this.handleSubmit}>
         <label>

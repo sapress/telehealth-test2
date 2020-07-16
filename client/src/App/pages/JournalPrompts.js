@@ -52,6 +52,12 @@ class JournalPrompts extends React.Component {
         <input type="submit" value="Submit" />
       </form>
 	  
+		<div>
+		<Link to={'./JournalForm'}>
+                    <button variant="raised">Proceed to Journal Form</button>
+        </Link>
+		</div>
+	  
 			</div>
 			
 		);
