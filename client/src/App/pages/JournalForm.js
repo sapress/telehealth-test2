@@ -33,15 +33,17 @@ class JournalHome extends Component {
 	<div>
 	
 	<div>
+	<html>
+	<body>
+	<p id="demo"></p>
 	<script>
 	var WhichPrompt = localStorage.getItem("WhichPrompt");
 	document.getElementById("WhichPrompt").innerHTML = WhichPrompt;
 	</script>
+	</body>
+	</html>
 	</div>
 	
-	<div>
-	<h1 value={WhichPrompt} />
-	</div>
 	
       <form onSubmit={this.handleSubmit}>
         <label>
