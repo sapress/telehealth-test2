@@ -8,7 +8,7 @@ class JournalHome extends Component {
       constructor(props) {
     super(props);
     this.state = {
-      value: 'Please write an essay about your favorite DOM element.'
+      value: 'Can I modify the "value" var?.'
     };
 
     this.handleChange = this.handleChange.bind(this);
