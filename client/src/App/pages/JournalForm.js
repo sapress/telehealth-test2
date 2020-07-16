@@ -36,11 +36,15 @@ class JournalHome extends Component {
 	
       <form onSubmit={this.handleSubmit}>
         <label>
+		<div>
           Essay:
+		</div>
           <textarea value={this.state.value} onChange={this.handleChange} />
         </label>
+		<div>
         <input type="submit" value="Submit" />
-      </form>
+		</div>
+	  </form>
 	  </div>
     );
   }
