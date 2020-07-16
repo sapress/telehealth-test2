@@ -40,6 +40,7 @@ class JournalHome extends Component {
 	<script>
 	var WhichPrompt = document.getElementById("id01");
 	var PromptTitle = localStorage.getItem("WhichPrompt");
+	alert('Value of PromptTitle: ' + PromptTitle);
 	WhichPrompt.innerHTML = PromptTitle;
 	</script>
 	
