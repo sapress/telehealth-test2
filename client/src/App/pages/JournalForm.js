@@ -30,6 +30,8 @@ class JournalHome extends Component {
   render() {
     return (
 	
+	alert('Value of PromptTitle: ' + PromptTitle);
+	
 	<div>
 	
 	<div>
@@ -37,7 +39,8 @@ class JournalHome extends Component {
 	<body>
 	<h1 id="id01">Prompt Here</h1>
 	
-	alert('Value of PromptTitle: ' + PromptTitle);
+	
+	
 	
 	<script>
 	var WhichPrompt = document.getElementById("id01");
