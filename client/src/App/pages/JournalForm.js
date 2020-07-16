@@ -24,7 +24,7 @@ class JournalHome extends Component {
     event.preventDefault();
   }
 
-function myFunction() {
+   myFunction() {
 			var number = "123";
 			document.getElementById("myText").innerHTML = number;
 			}
