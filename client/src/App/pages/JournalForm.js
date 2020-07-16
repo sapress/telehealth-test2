@@ -26,30 +26,36 @@ class JournalHome extends Component {
 
 
 
-
   render() {
     return (
 	
 
 	
 	<div>
-	
 	<div>
 	
-	<body>
 	<h1 id="id01">Prompt Here</h1>
 	
 	
+	<head>
+		<script>
+			function myFunction() {
+			var number = "123";
+			document.getElementById("myText").innerHTML = number;
+			}
+		</script>
+	</head>
+
+<body onload="myFunction()">
+
+  <h1>"The value for number is: " <span id="myText"></span></h1>
+
+</body>
 	
 	
-	<script>
-	var WhichPrompt = document.getElementById("id01");
-	var PromptTitle = localStorage.getItem("WhichPrompt");
-	alert('Value of PromptTitle: ' + PromptTitle);
-	WhichPrompt.innerHTML = PromptTitle;
-	</script>
 	
-	</body>
+	
+
 	
 	</div>
 	
