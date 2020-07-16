@@ -30,7 +30,7 @@ class JournalHome extends Component {
   render() {
     return (
 	
-	alert('Value of PromptTitle: ' + PromptTitle);
+
 	
 	<div>
 	
@@ -45,7 +45,7 @@ class JournalHome extends Component {
 	<script>
 	var WhichPrompt = document.getElementById("id01");
 	var PromptTitle = localStorage.getItem("WhichPrompt");
-	
+	alert('Value of PromptTitle: ' + PromptTitle);
 	WhichPrompt.innerHTML = PromptTitle;
 	</script>
 	
