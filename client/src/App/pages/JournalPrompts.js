@@ -22,7 +22,7 @@ class JournalPrompts extends React.Component {
 
   handleChange(event) {
     this.setState({value: event.target.value});
-	localStorage.setItem("WhichPrompt",value);
+	localStorage.setItem("WhichPrompt",event.target.value);
   }
 
   handleSubmit(event) {
