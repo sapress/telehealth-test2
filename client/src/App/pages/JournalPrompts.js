@@ -22,10 +22,12 @@ class JournalPrompts extends React.Component {
 
   handleChange(event) {
     this.setState({value: event.target.value});
+	localStorage.setItem("WhichPrompt",value);
   }
 
   handleSubmit(event) {
-    alert('Your favorite flavor is: ' + this.state.value);
+	var WhichOne = localStorage.getItem("WhichPrompt");
+    alert('Your favorite flavor is: ' + WhichOne);
     event.preventDefault();
   }
 			
