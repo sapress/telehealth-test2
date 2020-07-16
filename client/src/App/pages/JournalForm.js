@@ -40,7 +40,7 @@ class JournalHome extends Component {
 	</div>
 	
 	<div>
-	<textarea value={this.state.PromptToDisplay} />
+	<h1 value={WhichPrompt} />
 	</div>
 	
       <form onSubmit={this.handleSubmit}>
