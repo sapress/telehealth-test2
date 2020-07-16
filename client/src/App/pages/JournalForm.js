@@ -24,7 +24,10 @@ class JournalHome extends Component {
     event.preventDefault();
   }
 
-
+function myFunction() {
+			var number = "123";
+			document.getElementById("myText").innerHTML = number;
+			}
 
   render() {
     return (
@@ -39,10 +42,7 @@ class JournalHome extends Component {
 	
 	<head>
 		<script>
-			function myFunction() {
-			var number = "123";
-			document.getElementById("myText").innerHTML = number;
-			}
+			
 		</script>
 	</head>
 
