@@ -8,8 +8,7 @@ class JournalHome extends Component {
       constructor(props) {
     super(props);
     this.state = {
-      value: 'Can I modify the "value" var?.',
-	  PromptToDisplay: localStorage.getItem("WhichPrompt");
+      value: 'Can I modify the "value" var?.'
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -25,6 +24,9 @@ class JournalHome extends Component {
     event.preventDefault();
   }
 
+
+
+
   render() {
     return (
 	
@@ -32,7 +34,7 @@ class JournalHome extends Component {
 	
 	<div>
 	<script>
-	var WhichPrompt = sessionStorage.getItem("WhichPrompt");
+	var WhichPrompt = localStorage.getItem("WhichPrompt");
 	document.getElementById("WhichPrompt").innerHTML = WhichPrompt;
 	</script>
 	</div>
