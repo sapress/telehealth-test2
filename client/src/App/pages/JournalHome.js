@@ -16,7 +16,7 @@ class JournalHome extends Component {
                 </Link>
 				
 				{/* Link to List.js */}
-                <Link to={'./list'}>
+                <Link to={'./JournalPast'}>
                     <button variant="raised">Read Old Entries</button>
                 </Link>
 				
