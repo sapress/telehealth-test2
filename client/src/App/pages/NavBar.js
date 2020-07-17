@@ -34,7 +34,7 @@ class NavBar extends React.Component {
                     as={NavLink}
                     to="/survey"
                     name="Student Survey"
-                    active={activeItem === 'Student Survey'}
+                    active={activeItem === 'StudentSurvey'}
                     onClick={this.handleItemClick}
                 />
                 <Menu.Item
