@@ -45,7 +45,7 @@ class JournalPrompts extends React.Component {
 		<form onSubmit={this.handleSubmit}>
         <label>
           Pick your favorite flavor:
-          <select value={this.state.prompt} onChange={this.handleChange}>
+          <select name="prompt" value={this.state.prompt} onChange={this.handleChange}>
             <option value="grapefruit">Grapefruit</option>
             <option value="lime">Lime</option>
             <option value="coconut">Coconut</option>
@@ -67,7 +67,7 @@ class JournalPrompts extends React.Component {
 		<div>
           Essay:
 		</div>
-          <textarea value={this.state.essay} onChange={this.handleChange} />
+          <textarea name="essay" value={this.state.essay} onChange={this.handleChange} />
         </label>
 		<div>
         <input type="submit" value="Submit" />
