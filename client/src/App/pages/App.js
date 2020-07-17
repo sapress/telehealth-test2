@@ -12,7 +12,7 @@ import NavBar from './NavBar';
 import Home from './Home';
 import List from './List';
 import CommunityHome from './CommunityHome';
-import StudentSurvey from '.Survey/StudentSurvey';
+import StudentSurvey from './Survey/StudentSurvey';
 
 class App extends Component {
     render() {
