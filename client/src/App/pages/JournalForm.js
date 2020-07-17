@@ -43,7 +43,7 @@ class JournalHome extends Component {
 	<script>
 	document.write(Prompt);
 	</script>
-	<h1>
+	</h1>
 	
 
 	
