@@ -8,7 +8,8 @@ class JournalHome extends Component {
       constructor(props) {
     super(props);
     this.state = {
-      value: localStorage.getItem("WhichPrompt")
+      prompt: 'Select a Prompt: ',
+	  essay: 'essay goes here',
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -41,7 +42,9 @@ class JournalHome extends Component {
 	
 	</div>
 	
-	<h1 Test Oneline Header />
+	<h1>
+		
+	</h1>
 	
 	<script>
 	document.getElementById("Promptval").innerHTML = "AltText";

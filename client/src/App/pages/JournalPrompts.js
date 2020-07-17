@@ -14,7 +14,11 @@ class JournalPrompts extends React.Component {
 	
 	 constructor(props) {
     super(props);
-    this.state = {value: 'coconut'};
+    this.state = {
+      prompt: 'Select a Prompt: ',
+	  essay: 'essay goes here',
+    };
+	
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -26,8 +30,7 @@ class JournalPrompts extends React.Component {
   }
 
   handleSubmit(event) {
-	var WhichOne = localStorage.getItem("WhichPrompt");
-    alert('Your favorite flavor is: ' + WhichOne);
+    alert('Prompt: ' + this.state.prompt + 'Essay: ' + this.state.essay);
     event.preventDefault();
   }
 			
