@@ -76,13 +76,7 @@ class JournalPrompts extends React.Component {
 	  
 	  </div>
 		
-		/*
-		<div>
-		<Link to={'./JournalForm'}>
-                    <button variant="raised">Proceed to Journal Form</button>
-        </Link>
-		</div>
-		*/
+
 		
 		
 		
