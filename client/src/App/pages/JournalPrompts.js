@@ -15,7 +15,7 @@ class JournalPrompts extends React.Component {
 	 constructor(props) {
     super(props);
     this.state = {
-      prompt: 'Select a Prompt: ',
+      prompt: 'p1',
 	  essay: 'essay goes here',
     };
 	
@@ -85,7 +85,7 @@ class JournalPrompts extends React.Component {
 		<div>
           Essay:
 		</div>
-          <textarea name="essay" value={this.state.essay} onChange={this.handleChange} />
+          <textarea rows="6" cols="70" name="essay" value={this.state.essay} onChange={this.handleChange} />
         </label>
 		<div>
         <input type="submit" value="Submit" />
