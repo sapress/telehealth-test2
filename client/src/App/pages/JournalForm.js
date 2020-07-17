@@ -41,7 +41,7 @@ class JournalHome extends Component {
 	
 	</div>
 	
-	<h1 value={this.state.value} />
+	<textarea value={this.state.value} />
 	
       <form onSubmit={this.handleSubmit}>
         <label>
