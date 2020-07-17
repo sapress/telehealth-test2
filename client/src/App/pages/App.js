@@ -12,6 +12,7 @@ import NavBar from './NavBar';
 import Home from './Home';
 import List from './List';
 import CommunityHome from './CommunityHome';
+import StudentSurvey from '.Survey/StudentSurvey';
 
 class App extends Component {
     render() {
@@ -21,6 +22,7 @@ class App extends Component {
                     <NavBar />
                     <Route exact path="/" component={Home} />
                     <Route path="/list" component={List} />
+                    <Route path="/survey" component={StudentSurvey} />
                     <Route path="/community" component={CommunityHome} />
                 </BrowserRouter>
             </div>
