@@ -41,7 +41,7 @@ class JournalHome extends Component {
 	
 	</div>
 	
-	<h1 id="Promptval">Hi</h1>
+	<h1 Test Oneline Header />
 	
 	<script>
 	document.getElementById("Promptval").innerHTML = "AltText";
