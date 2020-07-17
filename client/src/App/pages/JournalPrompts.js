@@ -42,18 +42,36 @@ class JournalPrompts extends React.Component {
 				<h1>Please Select one of the Prompts Below</h1>
 
 		<div>
-		<form onSubmit={this.handleSubmit}>
         <label>
-          Pick your favorite flavor:
+		
           <select name="prompt" value={this.state.prompt} onChange={this.handleChange}>
-            <option value="grapefruit">Grapefruit</option>
-            <option value="lime">Lime</option>
-            <option value="coconut">Coconut</option>
-            <option value="mango">Mango</option>
-          </select>
+            
+			<option value="p1">
+				Describe something that happened in the last week you have strong feelings about. What happened? What did you do in response?
+			</option>
+			
+            <option value="p2">
+				Describe a goal you have for the next [time frame]. What steps do you need to take in order to achieve it? How can you start to do so now?
+			</option>
+			
+            <option value="p3">
+				Write about a song you have been listening to a lot recently. Why do you think you are drawn to it?
+			</option>
+			
+            <option value="p4">
+				What is the last dream you had that you remember?
+			</option>
+			
+			<option value="p5">
+				Describe something you're looking forward to this week:
+			</option>
+			
+			<option value="p6">
+				Think about the last time you had strong conflict with someone. What did you do to resolve it? What did you learn from that experience for the next time a similar situation occurs?
+			</option>
+          
+		  </select>
         </label>
-        <input type="submit" value="Submit" />
-      </form>
 	  </div>
 	  
 	  
