@@ -24,10 +24,7 @@ class JournalHome extends Component {
     event.preventDefault();
   }
 
-   myFunction() {
-			var number = "123";
-			document.getElementById("myText").innerHTML = number;
-			}
+   
 
   render() {
     return (
@@ -37,23 +34,16 @@ class JournalHome extends Component {
 	<div>
 	<div>
 	
-	<h1 id="id01">Prompt Here</h1>
 	
+	<script>
+	var Prompt = localStorage.getItem("WhichPrompt");
+	</script>
 	
-	<head>
-		<script>
-			
-		</script>
-	</head>
-
-<body onload="myFunction()">
-
-  <h1>"The value for number is: " <span id="myText"></span></h1>
-
-</body>
-	
-	
-	
+	<h1>
+	<script>
+	document.write(Prompt);
+	</script>
+	<h1>
 	
 
 	
