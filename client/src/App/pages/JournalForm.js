@@ -39,16 +39,9 @@ class JournalHome extends Component {
 	var Prompt = localStorage.getItem("WhichPrompt");
 	</script>
 	
-	
-	<script>
-	alert('Hey');
-	</script>
-	
-	
-
-	
 	</div>
 	
+	<h1 value={this.state.value} />
 	
       <form onSubmit={this.handleSubmit}>
         <label>
