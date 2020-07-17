@@ -41,7 +41,7 @@ class JournalHome extends Component {
 	
 	<h1>
 	<script>
-	document.write(Prompt);
+	document.write("Hello");
 	</script>
 	</h1>
 	
