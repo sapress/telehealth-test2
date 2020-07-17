@@ -8,71 +8,15 @@ const {
     DOM: { input, select, textarea },
 } = React;
 
-const FormStress = (props) => {
+const SimpleForm = (props) => {
     const { handleSubmit, pristine, reset, submitting } = props;
-
     return (
-        <div>Stressor Survey</div>
         <form onSubmit={handleSubmit}>
-            <div>
-                <label>Why are you stressed?</label>
-                <div>
-                    <label>
-                        <Field
-                            name="stressor"
-                            component={input}
-                            type="radio"
-                            value="schoolwork"
-                        />
-                        Schoolwork
-                    </label>
-                    <label>
-                        <Field
-                            name="stressor"
-                            component={input}
-                            type="radio"
-                            value="job"
-                        />
-                        Job
-                    </label>
-                    <label>
-                        <Field
-                            name="stressor"
-                            component={input}
-                            type="radio"
-                            value="firstyear"
-                        />
-                        First year at school
-                    </label>
-                    <label>
-                        <Field
-                            name="stressor"
-                            component={input}
-                            type="radio"
-                            value="covid"
-                        />
-                        My routine has been affected by COVID-19
-                    </label>
-                    <label>
-                        <Field
-                            name="stressor"
-                            component={input}
-                            type="radio"
-                            value="finances"
-                        />
-                        My Financial Situation
-                    </label>
-                </div>
-                <div>
-                    <button type="submit" disabled={pristine || submitting}>
-                        Submit
-                    </button>
-                </div>
-            </div>
+            <div>Form</div>
         </form>
     );
 };
 
 export default reduxForm({
-    form: 'simple', // a unique identifier for this form
+    form: 'stressor',
 })(FormStress);

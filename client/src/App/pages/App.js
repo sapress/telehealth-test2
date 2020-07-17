@@ -13,6 +13,7 @@ import Home from './Home';
 import List from './List';
 import CommunityHome from './CommunityHome';
 import StudentSurvey from './Survey/StudentSurvey';
+import FormStress from './Survey/FormStress';
 
 class App extends Component {
     render() {
@@ -23,6 +24,7 @@ class App extends Component {
                     <Route exact path="/" component={Home} />
                     <Route path="/list" component={List} />
                     <Route path="/survey" component={StudentSurvey} />
+                    <Route path="/stressor-survey" component={FormStress} />
                     <Route path="/community" component={CommunityHome} />
                 </BrowserRouter>
             </div>
