@@ -39,11 +39,11 @@ class JournalHome extends Component {
 	var Prompt = localStorage.getItem("WhichPrompt");
 	</script>
 	
-	<h1>
+	
 	<script>
-	document.write("Hello");
+	alert('Hey');
 	</script>
-	</h1>
+	
 	
 
 	
