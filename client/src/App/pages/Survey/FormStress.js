@@ -12,6 +12,7 @@ const FormStress = (props) => {
     const { handleSubmit, pristine, reset, submitting } = props;
 
     return (
+        <div>Stressor Survey</div>
         <form onSubmit={handleSubmit}>
             <div>
                 <label>Why are you stressed?</label>
