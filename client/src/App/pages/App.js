@@ -16,7 +16,6 @@ import MySpace from './MySpace';
 import MeditationPage from './MeditationPage';
 import JournalHome from './JournalHome';
 import JournalPrompts from './JournalPrompts';
-import JournalForm from './JournalForm';
 import JournalPast from './JournalPast';
 
 class App extends Component {
@@ -32,7 +31,6 @@ class App extends Component {
 					<Route path="/MeditationPage" component={MeditationPage} />
 					<Route path="/JournalHome" component={JournalHome} />
 					<Route path="/JournalPrompts" component={JournalPrompts} />
-					<Route path="/JournalForm" component={JournalForm} />
 					<Route path="/JournalPast" component={JournalPast} />
                 </BrowserRouter>
             </div>
