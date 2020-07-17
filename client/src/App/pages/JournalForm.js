@@ -41,7 +41,11 @@ class JournalHome extends Component {
 	
 	</div>
 	
-	<textarea value={this.state.value} />
+	<h1 id="Promptval"/>Hi<h1>
+	
+	<script>
+	document.getElementById("Promptval").innerHTML = "AltText";
+	</script>
 	
       <form onSubmit={this.handleSubmit}>
         <label>
