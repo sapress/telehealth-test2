@@ -8,7 +8,7 @@ const {
     DOM: { input, select, textarea },
 } = React;
 
-const SimpleForm = (props) => {
+const FormStress = (props) => {
     const { handleSubmit, pristine, reset, submitting } = props;
     return (
         <form onSubmit={handleSubmit}>
