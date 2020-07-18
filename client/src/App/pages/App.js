@@ -3,8 +3,6 @@
 import React from 'react';
 import { Component } from 'react';
 import './App.css';
-
-import { NavLink, withRouter } from 'react-router-dom';
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
 
 // Component Imports
@@ -20,6 +18,8 @@ import JournalPrompts from './JournalPrompts';
 import JournalPast from './JournalPast';
 import StudentSurvey from './Survey/StudentSurvey';
 import FormStress from './Survey/FormStress';
+import MentorProg from './Survey/MentorProg';
+import ProfessionalInfo from './Survey/ProfessionalInfo';
 
 class App extends Component {
     render() {
@@ -31,44 +31,22 @@ class App extends Component {
                     <Route path="/list" component={List} />
                     <Route path="/survey" component={StudentSurvey} />
                     <Route path="/stressor-survey" component={FormStress} />
+                    <Route path="/mentor-program" component={MentorProg} />
+                    <Route
+                        path="/professional-information"
+                        component={ProfessionalInfo}
+                    />
                     <Route path="/community" component={CommunityHome} />
-					<Route path="/MySpace" component={MySpace} />
-					<Route path="/MeditationPage" component={MeditationPage} />
-					<Route path="/JournalHome" component={JournalHome} />
-					<Route path="/JournalPrompts" component={JournalPrompts} />
-					<Route path="/JournalPast" component={JournalPast} />
+                    <Route path="/MySpace" component={MySpace} />
+                    <Route path="/MeditationPage" component={MeditationPage} />
+                    <Route path="/JournalHome" component={JournalHome} />
+                    <Route path="/JournalPrompts" component={JournalPrompts} />
+                    <Route path="/JournalPast" component={JournalPast} />
                 </BrowserRouter>
             </div>
         );
-        return (
-            <Switch>
-                <App />
-            </Switch>
-        );
+        return <App />;
     }
 }
 
 export default App;
-
-// function App() {
-//     return (
-//         <div className="App">
-//             <header className="App-header">
-//                 <img src={logo} className="App-logo" alt="logo" />
-//                 <p>
-//                     Edit <code>src/App.js</code> and save to reload.
-//                 </p>
-//                 <a
-//                     className="App-link"
-//                     href="https://reactjs.org"
-//                     target="_blank"
-//                     rel="noopener noreferrer"
-//                 >
-//                     Learn React
-//                 </a>
-//             </header>
-//         </div>
-//     );
-// }
-
-// export default App;

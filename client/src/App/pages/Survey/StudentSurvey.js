@@ -6,70 +6,44 @@ import { Field, reduxForm } from 'redux-form'; // Field is a component from redu
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import { Header } from 'semantic-ui-react';
 
-// action creator
-// TODO
+import './Survey.css';
 
 class StudentSurvey extends React.Component {
     render() {
         return (
             <div>
-                <h1>Hello, how are you?</h1>
-
-                <Link to={'./FormStress'}>
-                    <button variant="raised">I am stressed</button>
-                </Link>
-                <Link to={'./FormLonely'}>
-                    <button variant="raised">I am lonely</button>
-                </Link>
-                <Link to={'./FormTired'}>
-                    <button variant="raised">I am tired or unmotivated</button>
-                </Link>
-                <Link to={'./FormSOS'}>
-                    <button variant="raised">I would like professional help</button>
-                </Link>
+                <Header className="ui huge header">Hello, how are you?</Header>
+                <div className="ui equal width grid">
+                    <div className="column">
+                        <Link to={'./stressor-survey'}>
+                            <button className="big ui button">I am stressed</button>
+                        </Link>
+                    </div>
+                    <div className="column">
+                        <Link to={'./mentor-program'}>
+                            <button className="big ui button">I am lonely</button>
+                        </Link>
+                    </div>
+                    <div className="column">
+                        <Link to={'./FormTired'}>
+                            <button className="big ui button">
+                                I am tired or unmotivated
+                            </button>
+                        </Link>
+                    </div>
+                    <div className="column">
+                        <Link to={'./professional-information'}>
+                            <button className="big ui button">
+                                I would like professional help
+                            </button>
+                        </Link>
+                    </div>
+                </div>
             </div>
         );
     }
 }
 
 export default StudentSurvey;
-
-//     constructor(props) {
-//         super(props);
-//         this.nextPage = this.nextPage.bind(this);
-//         this.previousPage = this.previousPage.bind(this);
-//         this.state = {
-//             page: 1,
-//         };
-//     }
-//     nextPage() {
-//         this.setState({ page: this.state.page + 1 });
-//     }
-//     previousPage() {
-//         this.setState({ page: this.state.page - 1 });
-//     }
-//     render() {
-//         const { onSubmit } = this.props;
-//         const { page } = this.state;
-//         return (
-//             <div>
-//                 {page === 1 && <SurveyPageOne onSubmit={this.nextPage} />}
-//                 {page === 2 && (
-//                     <SurveyPageTwo
-//                         previousPage={this.previousPage}
-//                         onSubmit={this.nextPage}
-//                     />
-//                 )}
-//                 {page === 3 && (
-//                     <SurveyPageThree
-//                         previousPage={this.previousPage}
-//                         onSubmit={onSubmit}
-//                     />
-//                 )}
-//             </div>
-//         );
-//     }
-// }
-// StudentSurvey.propTypes = {
-//     onSubmit: PropTypes.func.isRequired,

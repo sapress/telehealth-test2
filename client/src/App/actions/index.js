@@ -15,7 +15,8 @@ export const signOut = () => {
 };
 
 // async action creator example (for an api call)
-// export const createStream = (formValues) => async (dispatch) => {
-//     //post request with axios
-//     streams.post('/streams', formValues);
-// };
+export const reportStress = (formValues) => async (dispatch) => {
+    //     //post request with axios
+    //     streams.post('/streams', formValues);
+    console.log(formValues);
+};
