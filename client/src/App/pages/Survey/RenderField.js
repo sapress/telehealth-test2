@@ -1,6 +1,6 @@
 import React from 'react';
 
-const renderField = ({ input, label, type, meta: { touched, error } }) => (
+const RenderField = ({ input, label, type, meta: { touched, error } }) => (
     <div>
         <label>{label}</label>
         <div>
@@ -10,4 +10,4 @@ const renderField = ({ input, label, type, meta: { touched, error } }) => (
     </div>
 );
 
-export default renderField;
+export default RenderField;

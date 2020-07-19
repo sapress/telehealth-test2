@@ -20,3 +20,19 @@ export const reportStress = (formValues) => async (dispatch) => {
     //     streams.post('/streams', formValues);
     console.log(formValues);
 };
+
+export const reportSleep = (formValues) => async (dispactch) => {
+    console.log(formValues);
+};
+
+export const reportEating = (formValues) => async (dispatch) => {
+    console.log(formValues);
+};
+
+export const reportExercise = (formValues) => async (dispatch) => {
+    console.log(formValues);
+};
+
+export const reportStressYN = (formValues) => async (dispatch) => {
+    console.log(formValues);
+};

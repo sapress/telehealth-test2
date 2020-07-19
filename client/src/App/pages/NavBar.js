@@ -1,7 +1,7 @@
 // Navigation Bar along top of every page
 
-import React, { Component } from 'react';
-import { Input, Menu } from 'semantic-ui-react';
+import React from 'react';
+import { Menu } from 'semantic-ui-react';
 import { NavLink, withRouter } from 'react-router-dom';
 
 class NavBar extends React.Component {
@@ -44,17 +44,14 @@ class NavBar extends React.Component {
                     active={activeItem === 'CommunityHome'}
                     onClick={this.handleItemClick}
                 />
-                
+
                 <Menu.Item
-					as={NavLink}
-					to="/MySpace"
-					name="MySpace"
-					active={activeItem === 'MySpace'}
-					onClick={this.handleItemClick}
-				/>
-				
-				
-            
+                    as={NavLink}
+                    to="/MySpace"
+                    name="MySpace"
+                    active={activeItem === 'MySpace'}
+                    onClick={this.handleItemClick}
+                />
             </Menu>
         );
     }

@@ -11,7 +11,21 @@ import { reportStress } from '../../actions';
 
 class FormStress extends React.Component {
     onSubmit = (formValues) => {
+        // calls action creator
         this.props.reportStress(formValues);
+        // change these links for each induvidual university
+        if (formValues.stressor === 'school') {
+            this.props.history.push('/sleep-resources');
+        } else if (formValues.stressor === 'job') {
+            this.props.history.push('/sleep-resources');
+        } else if (formValues.stressor === 'firstyear') {
+            this.props.history.push('/sleep-resources');
+        } else if (formValues.stressor === 'covid') {
+            this.props.history.push('/sleep-resources');
+        } else {
+            // finances
+            this.props.history.push('/sleep-resources');
+        }
     };
 
     renderError({ error, touched }) {
@@ -52,7 +66,7 @@ class FormStress extends React.Component {
 const validate = (formValues) => {
     const errors = {};
     if (!formValues.stressor) {
-        errors.title = 'You must select a stress point';
+        errors.stressor = 'You must select a stress point';
     }
     return errors;
 };

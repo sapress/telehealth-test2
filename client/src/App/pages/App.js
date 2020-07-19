@@ -20,6 +20,11 @@ import StudentSurvey from './Survey/StudentSurvey';
 import FormStress from './Survey/FormStress';
 import MentorProg from './Survey/MentorProg';
 import ProfessionalInfo from './Survey/ProfessionalInfo';
+import FormSleep from './Survey/FormSleep';
+import SleepInfo from './Survey/SleepInfo';
+import FormEating from './Survey/FormEating';
+import FormExercise from './Survey/FormExercise';
+import FormStressTired from './Survey/FormStressTired';
 
 class App extends Component {
     render() {
@@ -36,6 +41,11 @@ class App extends Component {
                         path="/professional-information"
                         component={ProfessionalInfo}
                     />
+                    <Route path="/survey-sleep" component={FormSleep} />
+                    <Route path="/sleep-resources" component={SleepInfo} />
+                    <Route path="/survey-eating-habits" component={FormEating} />
+                    <Route path="/survey-exercise" component={FormExercise} />
+                    <Route path="/survey-stress-yn" component={FormStressTired} />
                     <Route path="/community" component={CommunityHome} />
                     <Route path="/MySpace" component={MySpace} />
                     <Route path="/MeditationPage" component={MeditationPage} />
