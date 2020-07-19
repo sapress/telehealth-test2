@@ -13,27 +13,35 @@ import './Survey.css';
 class StudentSurvey extends React.Component {
     render() {
         return (
-            <div>
-                <Header className="ui huge header">Hello, how are you?</Header>
-                <div className="ui equal width grid">
-                    <div className="column">
+            <div className="ui container padded centered stackable grid">
+                <div className="ui container row ten wide">
+                    <Header className="ui huge header">Hello, how are you?</Header>
+                </div>
+                <div className="ui container row">
+                    <div className="column six wide center aligned ">
                         <Link to={'./stressor-survey'}>
                             <button className="big ui button">I am stressed</button>
                         </Link>
                     </div>
-                    <div className="column">
+                </div>
+                <div className="ui container row">
+                    <div className="column six wide center aligned ">
                         <Link to={'./mentor-program'}>
                             <button className="big ui button">I am lonely</button>
                         </Link>
                     </div>
-                    <div className="column">
+                </div>
+                <div className="ui container row">
+                    <div className="column six wide center aligned ">
                         <Link to={'./survey-sleep'}>
                             <button className="big ui button">
                                 I am tired or unmotivated
                             </button>
                         </Link>
                     </div>
-                    <div className="column">
+                </div>
+                <div className="ui container row">
+                    <div className="column six wide center aligned ">
                         <Link to={'./professional-information'}>
                             <button className="big ui button">
                                 I would like professional help

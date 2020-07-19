@@ -4,7 +4,16 @@
 
 import React, { Component } from 'react';
 import { Field, reduxForm, formValues } from 'redux-form';
-import { Form, Icon, Button, Input, Dropdown } from 'semantic-ui-react';
+import {
+    Form,
+    Icon,
+    Button,
+    Input,
+    Dropdown,
+    Header,
+    Grid,
+    Container,
+} from 'semantic-ui-react';
 
 import { connect } from 'react-redux';
 import { reportStress } from '../../actions';
@@ -40,25 +49,50 @@ class FormStress extends React.Component {
 
     render() {
         return (
-            <Form
-                onSubmit={this.props.handleSubmit(this.onSubmit)}
-                className="ui form error"
-            >
-                <div>
-                    <label>What are you stressed about?</label>
-                    <div>
-                        <Field name="stressor" component="select">
-                            <option></option>
-                            <option value="school">Schoolwork</option>
-                            <option value="job">Job</option>
-                            <option value="firstyear">First Year Student Life</option>
-                            <option value="covid">Routine affected by COVID-19</option>
-                            <option value="finances">Financial Situation</option>
-                        </Field>
-                    </div>
-                </div>
-                <button className="ui button primary">Submit</button>
-            </Form>
+            <Container>
+                <Grid>
+                    <Grid.Row centered>
+                        <Form
+                            onSubmit={this.props.handleSubmit(this.onSubmit)}
+                            className="ui form error"
+                        >
+                            <div className="ui container padded centered stackable grid">
+                                <div className="ui container row left floated">
+                                    <label>
+                                        <Header>What are you stressed about?</Header>
+                                    </label>
+                                </div>
+                                <div className="ui container row">
+                                    <div column six wide center aligned>
+                                        <Field name="stressor" component="select">
+                                            <option></option>
+                                            <option value="school">Schoolwork</option>
+                                            <option value="job">Job</option>
+                                            <option value="firstyear">
+                                                First Year Student Life
+                                            </option>
+                                            <option value="covid">
+                                                Routine affected by COVID-19
+                                            </option>
+                                            <option value="finances">
+                                                Financial Situation
+                                            </option>
+                                        </Field>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="column two wide center aligned">
+                                <div className="ui container row two wide">
+                                    <button className="ui button primary center aligned">
+                                        Submit
+                                    </button>
+                                </div>
+                            </div>
+                        </Form>
+                    </Grid.Row>
+                </Grid>
+            </Container>
         );
     }
 }

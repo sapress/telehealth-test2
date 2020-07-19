@@ -4,7 +4,16 @@
 
 import React, { Component } from 'react';
 import { Field, reduxForm, formValues } from 'redux-form';
-import { Form, Icon, Button, Input, Dropdown } from 'semantic-ui-react';
+import {
+    Form,
+    Icon,
+    Button,
+    Input,
+    Dropdown,
+    Container,
+    Grid,
+    Header,
+} from 'semantic-ui-react';
 
 import { connect } from 'react-redux';
 import { reportSleep } from '../../actions';
@@ -36,26 +45,41 @@ class FormSleep extends React.Component {
 
     render() {
         return (
-            <Form
-                onSubmit={this.props.handleSubmit(this.onSubmit)}
-                className="ui form error"
-            >
-                <div>
-                    <label>
-                        Do you regularly get the recommended eight hours of sleep?
-                    </label>
-                    <div>
-                        <Field name="sleep" component="select">
-                            <option></option>
-                            <option value="no">No</option>
-                            <option value="yes">Yes</option>
-                        </Field>
-                    </div>
-                </div>
-                <button className="ui button primary" type="submit">
-                    Submit
-                </button>
-            </Form>
+            <Container>
+                <Grid>
+                    <Grid.Row centered>
+                        <Form
+                            onSubmit={this.props.handleSubmit(this.onSubmit)}
+                            className="ui form error"
+                        >
+                            <div className="ui container padded centered stackable grid">
+                                <div className="ui container row">
+                                    <label>
+                                        <Header>
+                                            Do you regularly get the recommended eight
+                                            hours of sleep?
+                                        </Header>
+                                    </label>
+                                </div>
+                                <div className="ui container padded row">
+                                    <div column ten wide center aligned>
+                                        <Field name="sleep" component="select">
+                                            <option></option>
+                                            <option value="no">No</option>
+                                            <option value="yes">Yes</option>
+                                        </Field>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="ui container padded row">
+                                <button className="ui button primary" type="submit">
+                                    Submit
+                                </button>
+                            </div>
+                        </Form>
+                    </Grid.Row>
+                </Grid>
+            </Container>
         );
     }
 }
