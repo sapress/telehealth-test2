@@ -28,7 +28,7 @@ class FormEating extends React.Component {
         if (formValues.eating === 'yes') {
             this.props.history.push('/survey-exercise');
         } else {
-            this.props.history.push('/sleep-resources');
+            this.props.history.push('/nutrition-resources');
         }
     };
 

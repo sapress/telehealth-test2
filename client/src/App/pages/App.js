@@ -18,13 +18,21 @@ import JournalPrompts from './JournalPrompts';
 import JournalPast from './JournalPast';
 import StudentSurvey from './Survey/StudentSurvey';
 import FormStress from './Survey/FormStress';
+import CovidRoutineInfo from './Survey/stress-resources/CovidRoutineInfo';
+import FinanceInfo from './Survey/stress-resources/FinanceInfo';
+import FirstYearInfo from './Survey/stress-resources/FirstYearInfo';
+import JobInfo from './Survey/stress-resources/JobInfo';
+import SchoolworkInfo from './Survey/stress-resources/SchoolworkInfo';
 import MentorProg from './Survey/MentorProg';
 import ProfessionalInfo from './Survey/ProfessionalInfo';
 import FormSleep from './Survey/FormSleep';
 import SleepInfo from './Survey/SleepInfo';
 import FormEating from './Survey/FormEating';
+import EatingInfo from './Survey/EatingInfo';
 import FormExercise from './Survey/FormExercise';
+import ExerciseInfo from './Survey/ExerciseInfo';
 import FormStressTired from './Survey/FormStressTired';
+import ResourceList from './ResouceList';
 
 class App extends Component {
     render() {
@@ -36,6 +44,11 @@ class App extends Component {
                     <Route path="/list" component={List} />
                     <Route path="/survey" component={StudentSurvey} />
                     <Route path="/stressor-survey" component={FormStress} />
+                    <Route path="/covid-routine-resources" component={CovidRoutineInfo} />
+                    <Route path="/financial-resources" component={FinanceInfo} />
+                    <Route path="/first-year-resources" component={FirstYearInfo} />
+                    <Route path="/job-resources" component={JobInfo} />
+                    <Route path="/schoolwork-resources" component={SchoolworkInfo} />
                     <Route path="/mentor-program" component={MentorProg} />
                     <Route
                         path="/professional-information"
@@ -44,7 +57,9 @@ class App extends Component {
                     <Route path="/survey-sleep" component={FormSleep} />
                     <Route path="/sleep-resources" component={SleepInfo} />
                     <Route path="/survey-eating-habits" component={FormEating} />
+                    <Route path="/nutrition-resources" component={EatingInfo} />
                     <Route path="/survey-exercise" component={FormExercise} />
+                    <Route path="/exercise-resources" component={ExerciseInfo} />
                     <Route path="/survey-stress-yn" component={FormStressTired} />
                     <Route path="/community" component={CommunityHome} />
                     <Route path="/MySpace" component={MySpace} />
@@ -52,6 +67,7 @@ class App extends Component {
                     <Route path="/JournalHome" component={JournalHome} />
                     <Route path="/JournalPrompts" component={JournalPrompts} />
                     <Route path="/JournalPast" component={JournalPast} />
+                    <Route path="/resources" component={ResourceList} />
                 </BrowserRouter>
             </div>
         );

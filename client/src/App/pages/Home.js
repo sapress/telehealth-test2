@@ -14,6 +14,15 @@ class Home extends Component {
                 <Link to={'./list'}>
                     <button variant="raised">My List</button>
                 </Link>
+                <div className="ui container row">
+                    <div className="column six wide center aligned ">
+                        <Link to={'./professional-information'}>
+                            <button className="big red ui button">
+                                Professional Help
+                            </button>
+                        </Link>
+                    </div>
+                </div>
             </div>
         );
     }

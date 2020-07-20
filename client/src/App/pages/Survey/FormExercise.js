@@ -28,7 +28,7 @@ class FormExercise extends React.Component {
         if (formValues.exercise === 'yes') {
             this.props.history.push('/survey-stress-yn');
         } else {
-            this.props.history.push('/sleep-resources');
+            this.props.history.push('/exercise-resources');
         }
     };
 

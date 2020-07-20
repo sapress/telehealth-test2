@@ -33,7 +33,7 @@ class NavBar extends React.Component {
                 <Menu.Item
                     as={NavLink}
                     to="/survey"
-                    name="Student Survey"
+                    name="Student Resource Matcher"
                     active={activeItem === 'StudentSurvey'}
                     onClick={this.handleItemClick}
                 />
@@ -50,6 +50,13 @@ class NavBar extends React.Component {
                     to="/MySpace"
                     name="MySpace"
                     active={activeItem === 'MySpace'}
+                    onClick={this.handleItemClick}
+                />
+                <Menu.Item
+                    as={NavLink}
+                    to="/resources"
+                    name="All Resources"
+                    active={activeItem === 'ResourceList'}
                     onClick={this.handleItemClick}
                 />
             </Menu>

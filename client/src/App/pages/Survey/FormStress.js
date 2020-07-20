@@ -24,13 +24,13 @@ class FormStress extends React.Component {
         this.props.reportStress(formValues);
         // change these links for each induvidual university
         if (formValues.stressor === 'school') {
-            this.props.history.push('/sleep-resources');
+            this.props.history.push('/schoolwork-resources');
         } else if (formValues.stressor === 'job') {
-            this.props.history.push('/sleep-resources');
+            this.props.history.push('/job-resources');
         } else if (formValues.stressor === 'firstyear') {
-            this.props.history.push('/sleep-resources');
+            this.props.history.push('/first-year-resources');
         } else if (formValues.stressor === 'covid') {
-            this.props.history.push('/sleep-resources');
+            this.props.history.push('/covid-routine-resources');
         } else {
             // finances
             this.props.history.push('/sleep-resources');
