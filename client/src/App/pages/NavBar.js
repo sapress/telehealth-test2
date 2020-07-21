@@ -70,7 +70,7 @@ class NavBar extends React.Component {
 				
 				<Menu.Item
                     as={NavLink}
-                    to="/"
+                    to="/exerciselist"
                     name="Exercise List"
                     active={activeItem === 'ExercisesList'}
                     onClick={this.handleItemClick}
