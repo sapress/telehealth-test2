@@ -59,6 +59,23 @@ class NavBar extends React.Component {
                     active={activeItem === 'ResourceList'}
                     onClick={this.handleItemClick}
                 />
+				
+				<Menu.Item
+                    as={NavLink}
+                    to="/create"
+                    name="Create Exercise"
+                    active={activeItem === 'CreateExercise'}
+                    onClick={this.handleItemClick}
+                />
+				
+				<Menu.Item
+                    as={NavLink}
+                    to="/"
+                    name="Exercise List"
+                    active={activeItem === 'ExercisesList'}
+                    onClick={this.handleItemClick}
+                />
+				
             </Menu>
         );
     }

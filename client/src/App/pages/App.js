@@ -1,9 +1,11 @@
 // App compnent - includes the browser router and NavBar
 
 import React from 'react';
+import "bootstrap/dist/css/bootstrap.min.css";
 import { Component } from 'react';
 import './App.css';
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 // Component Imports
 import NavBar from './NavBar';
@@ -33,6 +35,13 @@ import FormExercise from './Survey/FormExercise';
 import ExerciseInfo from './Survey/ExerciseInfo';
 import FormStressTired from './Survey/FormStressTired';
 import ResourceList from './ResouceList';
+
+import ExercisesList from "./components/exercises-list.component";
+import EditExercise from "./components/edit-exercise.component";
+import CreateExercise from "./components/create-exercise.component";
+import CreateUser from "./components/create-user.component";
+
+
 
 class App extends Component {
     render() {
@@ -68,6 +77,12 @@ class App extends Component {
                     <Route path="/JournalPrompts" component={JournalPrompts} />
                     <Route path="/JournalPast" component={JournalPast} />
                     <Route path="/resources" component={ResourceList} />
+					
+					<Route path="/" exact component={ExercisesList} />
+					<Route path="/edit/:id" component={EditExercise} />
+					<Route path="/create" component={CreateExercise} />
+					<Route path="/user" component={CreateUser} />
+					
                 </BrowserRouter>
             </div>
         );
