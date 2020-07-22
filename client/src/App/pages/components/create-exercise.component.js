@@ -24,6 +24,12 @@ export default class CreateExercise extends Component {
 
   componentDidMount() {
 	  
+	  
+	console.log(`In componentDidMount Function`);
+	const randomPort = process.env.PORT;
+	const url = 'http://localhost:'+process.env.PORT+'/users/';  
+	console.log('URL of get request: '+url);
+	  
 	
 	
     axios.get(url)
@@ -87,11 +93,9 @@ export default class CreateExercise extends Component {
     return (
     <div>
 	
-	<script>
 	const randomPort = process.env.PORT;
 	const url = 'http://localhost:'+process.env.PORT+'/users/';  
 	console.log('URL of get request: '+url);
-	</script>
 	
       <h3>Create New Exercise Log</h3>
       <form onSubmit={this.onSubmit}>
