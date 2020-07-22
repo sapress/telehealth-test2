@@ -17,7 +17,7 @@ mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true }
 );
 const connection = mongoose.connection;
 connection.once('open', () => {
-  console.log("MongoDB database connection established successfully");
+  console.log("MongoDB database connection established successfully from indexjs");
 })
 
 
@@ -44,7 +44,7 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname + '/client/build/index.html'));
 });
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 7079;
 app.listen(port);
 
-console.log('App is listening on port ' + port);
+console.log('[INDEX] App is listening on port ' + port);
