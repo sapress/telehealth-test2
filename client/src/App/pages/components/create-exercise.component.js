@@ -23,7 +23,7 @@ export default class CreateExercise extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5000/users/')
+    axios.get("mongodb+srv://sample_user_1:telehealth-02@cluster0.pyeaz.mongodb.net/test?retryWrites=true&w=majority")
       .then(response => {
         if (response.data.length > 0) {
           this.setState({
