@@ -23,16 +23,7 @@ export default class CreateExercise extends Component {
   }
 
   componentDidMount() {
-	  
-	  
-	console.log(`In componentDidMount Function`);
-	const randomPort = process.env.PORT;
-	const url = 'http://localhost:'+process.env.PORT+'/users/';  
-	console.log('URL of get request: '+url);
-	  
-	
-	
-    axios.get(url)
+    axios.get('http://t2serve.herokuapp.com/users/')
       .then(response => {
         if (response.data.length > 0) {
           this.setState({
@@ -83,7 +74,7 @@ export default class CreateExercise extends Component {
 
     console.log(exercise);
 
-    axios.post('http://localhost:5000/exercises/add', exercise)
+    axios.post('http://t2serve.herokuapp.com/exercises/add', exercise)
       .then(res => console.log(res.data));
 
     window.location = '/';
@@ -92,11 +83,6 @@ export default class CreateExercise extends Component {
   render() {
     return (
     <div>
-	
-	const randomPort = process.env.PORT;
-	const url = 'http://localhost:'+process.env.PORT+'/users/';  
-	console.log('URL of get request: '+url);
-	
       <h3>Create New Exercise Log</h3>
       <form onSubmit={this.onSubmit}>
         <div className="form-group"> 
