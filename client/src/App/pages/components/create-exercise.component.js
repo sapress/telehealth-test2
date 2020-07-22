@@ -23,7 +23,13 @@ export default class CreateExercise extends Component {
   }
 
   componentDidMount() {
-    axios.get("mongodb+srv://sample_user_1:telehealth-02@cluster0.pyeaz.mongodb.net/test?retryWrites=true&w=majority")
+	  
+	const randomPort = process.env.PORT;
+	const url = 'http://localhost:'+process.env.PORT+'/users/';  
+	
+	console.log('URL of get request: '+url);
+	
+    axios.get(url)
       .then(response => {
         if (response.data.length > 0) {
           this.setState({

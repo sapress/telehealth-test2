@@ -17,7 +17,7 @@ mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true }
 );
 const connection = mongoose.connection;
 connection.once('open', () => {
-  console.log("MongoDB database connection established successfully from indexjs");
+  console.log("MongoDB database connection established successfully from indexjs on port" + process.env.PORT);
 })
 
 
