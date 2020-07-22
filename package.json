@@ -5,6 +5,7 @@
     "main": "index.js",
     "scripts": {
         "start": "node index.js",
+		"server": "cd backend && npm start",
         "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
     },
     "keywords": [],
