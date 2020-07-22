@@ -3,7 +3,8 @@ const path = require('path');
 
 const cors = require('cors');
 const mongoose = require('mongoose');
-require('dotenv').config();
+
+const ATLAS_URI=mongodb+srv://sample_user_1:telehealth-02@cluster0.pyeaz.mongodb.net/test?retryWrites=true&w=majority
 
 const app = express();
 
@@ -11,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 
-const uri = process.env.ATLAS_URI;
+const uri = mongodb+srv://sample_user_1:telehealth-02@cluster0.pyeaz.mongodb.net/test?retryWrites=true&w=majority;
 mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true }
 );
 const connection = mongoose.connection;
