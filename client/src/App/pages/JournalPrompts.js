@@ -28,6 +28,7 @@ class JournalPrompts extends React.Component {
 	  //date: new Date(),
 	  
     };
+	 }
 	
 	onChangePrompt(e) {
     this.setState({
