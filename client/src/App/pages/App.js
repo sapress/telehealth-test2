@@ -34,6 +34,8 @@ import ExerciseInfo from './Survey/ExerciseInfo';
 import FormStressTired from './Survey/FormStressTired';
 import ResourceList from './ResouceList';
 
+console.log(process.env.REACT_APP_ATLAS_URI);
+
 class App extends Component {
     render() {
         const App = () => (
