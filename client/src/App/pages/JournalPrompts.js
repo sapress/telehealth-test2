@@ -3,7 +3,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { NavLink, withRouter } from 'react-router-dom';
-
+import axios from 'axios';
+import DatePicker from 'react-datepicker';
+import "react-datepicker/dist/react-datepicker.css";
 
 
 
@@ -14,24 +16,54 @@ class JournalPrompts extends React.Component {
 	
 	 constructor(props) {
     super(props);
+	
+	this.onChangePrompt = this.onChangePrompt.bind(this);
+    this.onChangeResponse = this.onChangeResponse.bind(this);
+    //this.onChangeDate = this.onChangeDate.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
+	
     this.state = {
       prompt: 'p1',
-	  essay: 'essay goes here',
+	  response: 'essay goes here',
+	  //date: new Date(),
+	  
     };
 	
+	onChangePrompt(e) {
+    this.setState({
+      prompt: e.target.value
+    })
+  }
+  
+  onChangeResponse(e) {
+    this.setState({
+      username: e.target.response
+    })
+  }
+  
+  
+  onSubmit(e) {
+    e.preventDefault();
 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    const response = {
+      prompt: this.state.prompt,
+	  response: this.state.response
+    }
+
+    console.log(user);
+
+    axios.post('http://t2serve.herokuapp.com/enntries/add', response)
+      .then(res => console.log(res.data));
+
+    this.setState({
+      prompt: 'p1',
+	  response: 'essay goes here'
+    })
   }
 
-  handleChange(event) {
-    this.setState({ [event.target.name]: event.target.value });
   }
 
-  handleSubmit(event) {
-    alert('Prompt: ' + this.state.prompt + 'Essay: ' + this.state.essay);
-    event.preventDefault();
-  }
+  
 			
 	
 	render() {
@@ -44,7 +76,7 @@ class JournalPrompts extends React.Component {
 		<div>
         <label>
 		
-          <select name="prompt" value={this.state.prompt} onChange={this.handleChange}>
+          <select name="prompt" value={this.state.prompt} onChange={this.onChangePrompt}>
             
 			<option value="p1">
 				Describe something that happened in the last week you have strong feelings about. What happened? What did you do in response?
@@ -80,12 +112,12 @@ class JournalPrompts extends React.Component {
 	  
 	  <div>
 	  
-	  <form onSubmit={this.handleSubmit}>
+	  <form onSubmit={this.onSubmit}>
         <label>
 		<div>
           Essay:
 		</div>
-          <textarea rows="6" cols="70" name="essay" value={this.state.essay} onChange={this.handleChange} />
+          <textarea rows="6" cols="70" name="essay" value={this.state.essay} onChange={this.onChangeResponse} />
         </label>
 		<div>
         <input type="submit" value="Submit" />
